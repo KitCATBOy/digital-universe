@@ -1,0 +1,27 @@
+const body = document.querySelector("body"),
+      sidebar = body.querySelector(".sidebar"),
+      toggle = body.querySelector(".toggle"),
+      cherchBtn = body.querySelector(".cherche-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+
+        });
+        cherchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+
+        });
+
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if(body.classList.contains("dark")){
+                modeText.innerText = "Mode jour"
+            }else {
+                modeText.innerText = "Mode nuit"
+            }
+
+        });
